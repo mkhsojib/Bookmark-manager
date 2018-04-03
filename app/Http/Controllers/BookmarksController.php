@@ -18,7 +18,7 @@ class BookmarksController extends Controller
         $bookmarks = Bookmark::where('user_id', auth()->user()->id)->get();
 
 
-        return view('home')->with('bookmarks',$bookmarks);
+        return view('home')->with('bookmarks', $bookmarks);
 
     }
 
@@ -44,6 +44,20 @@ class BookmarksController extends Controller
         $bookmark->save();
 
         return redirect('/home')->with('success', 'Bookmark Added');
+
+
+    }
+
+
+    public function destroy($id)
+    {
+
+        $bookmark = Bookmark::find($id);
+
+        $bookmark->delete();
+
+
+        return;
 
 
     }

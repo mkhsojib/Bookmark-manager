@@ -34,7 +34,7 @@
 <span>{{$bookmark->description}}</span>
                                     <span class="button-group pull-right">
 
-                                     <button class="btn btn-danger" type="button" name="button"><span class="glyphicon glyphicon-remove"></span>Delete</button>
+                                     <button data-id="{{$bookmark->id}}" class="delete-bookmark btn btn-danger" type="button" name="button"><span class="glyphicon glyphicon-remove"></span>Delete</button>
 
                                    </span>
 

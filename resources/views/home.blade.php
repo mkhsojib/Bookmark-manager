@@ -19,6 +19,33 @@
                         <button data-toggle="modal" data-target="#addModal" type="button" class="btn btn-primary btn-lg"
                                 name="button">Add Bookmark
                         </button>
+                        <hr>
+
+                        <h3>My Bookmarks</h3>
+                        <ul class="list-group">
+
+                            @foreach($bookmarks as $bookmark)
+
+                                <li class="list-group-item clearfix">
+
+                                    <a href="{{$bookmark->url}}" target="_blank"
+                                         >{{$bookmark->name}} </a>
+
+<span>{{$bookmark->description}}</span>
+                                    <span class="button-group pull-right">
+
+                                     <button class="btn btn-danger" type="button" name="button"><span class="glyphicon glyphicon-remove"></span>Delete</button>
+
+                                   </span>
+
+                                </li>
+
+
+
+                            @endforeach
+
+
+                        </ul>
                     </div>
                 </div>
             </div>
